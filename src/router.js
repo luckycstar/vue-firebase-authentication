@@ -17,6 +17,10 @@ export default new Router({
       // ======================
       children: [
         {
+          path: '/',
+          redirect: '/login'
+        },
+        {
           path: '/login',
           name: 'Login',
           index: 1.1,
