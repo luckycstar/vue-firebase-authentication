@@ -1,9 +1,17 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import { auth } from './auth.module'
+import createPersistedState from "vuex-persistedstate";
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
+  modules: {
+    auth,
+  },
+  plugins: [createPersistedState({
+    storage: window.sessionStorage,
+  })],
   state: {
     drawer: false,
     items: [
@@ -37,7 +45,7 @@ export default new Vuex.Store({
   },
   mutations: {
     setDrawer: (state, payload) => (state.drawer = payload),
-    toggleDrawer: state => (state.drawer = !state.drawer)
+    toggleDrawer: state => (state.drawer = !state.drawer),
   },
   actions: {
 

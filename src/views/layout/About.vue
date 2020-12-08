@@ -60,7 +60,7 @@
     </section>
     <section class="u-clearfix u-section-2" id="sec-bf46">
       <img
-        src="../assets/styles/images/BlissChart.jpg"
+        src="../../assets/styles/images/BlissChart.jpg"
         style="width: 100%"
         alt=""
         class="u-expanded-height u-image u-image-default u-opacity u-opacity-40 u-image-1"
@@ -80,14 +80,14 @@
       data-image-height="512"
     >
       <img
-        src="../assets/styles/images/QUIZ_FORMAT2a.png"
+        src="../../assets/styles/images/QUIZ_FORMAT2a.png"
         alt=""
         class="u-image u-image-default u-image-1"
         data-image-width="1376"
         data-image-height="816"
       />
       <img
-        src="../assets/styles/images/GROUP_FRAMES.jpg"
+        src="../../assets/styles/images/GROUP_FRAMES.jpg"
         alt=""
         class="u-image u-image-default u-image-2"
         data-image-width="1167"
@@ -113,7 +113,7 @@
             With Colors, for example we are able to use the color
           </h3>
           <img
-            src="../assets/styles/images/Cartouche_ColorGreen.png"
+            src="../../assets/styles/images/Cartouche_ColorGreen.png"
             alt=""
             class="u-border-9 u-border-black u-image u-image-default u-preserve-proportions u-image-3"
             data-image-width="118"
@@ -135,7 +135,7 @@
             Wtih Names what could be more direct than an Image?
           </h3>
           <img
-            src="../assets/styles/images/Cartouche_ProperNoun2.jpg"
+            src="../../assets/styles/images/Cartouche_ProperNoun2.jpg"
             alt=""
             class="u-image u-image-default u-preserve-proportions u-image-4"
             data-image-width="251"
@@ -263,5 +263,5 @@
 </template>
 
 <style>
-@import "../assets/styles/About.css";
+@import "../../assets/styles/About.css";
 </style>

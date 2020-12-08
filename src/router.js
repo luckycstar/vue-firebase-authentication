@@ -1,15 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-// import firebase from 'firebase'
 
-import Home from './views/Home.vue'
-import About from './views/About.vue'
-import Contact from './views/Contact.vue'
-import Blog from './views/Blog.vue'
-import Language from './views/Language.vue'
-
-import Login from './views/authentication/Login'
-import Signup from './views/authentication/Signup'
 
 Vue.use(Router)
 
@@ -17,46 +8,62 @@ export default new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
+
     {
-      path: '/',
-      redirect: '/login'
+      path: '',
+      component: () => import('./views/Auth.vue'),
+      // ======================
+      // Theme routes / pages
+      // ======================
+      children: [
+        {
+          path: '/login',
+          name: 'Login',
+          index: 1.1,
+          component: () => import('./views/authentication/LoginRegister.vue'),
+        }
+      ]
     },
     {
-      path: '/login',
-      name: 'Login',
-      component: Login
+      path: '',
+      component: () => import('./views/MainContainer.vue'),
+      // ======================
+      // Theme routes / pages
+      // ======================
+      children: [
+        {
+          path: '/home',
+          name: 'Home',
+          index: 2.1,
+          component: () => import('./views/layout/Home.vue'),
+        },
+        {
+          path: '/about',
+          name: 'About',
+          index: 2.2,
+          component: () => import('./views/layout/About.vue'),
+        },
+        {
+          path: '/blog',
+          name: 'Blog',
+          index: 2.3,
+          component: () => import('./views/layout/Blog.vue'),
+        },
+        {
+          path: '/language',
+          name: 'Language',
+          index: 2.4,
+          component: () => import('./views/layout/Language.vue'),
+        },
+        {
+          path: '/contact',
+          name: 'Contact',
+          index: 2.5,
+          component: () => import('./views/layout/Contact.vue'),
+        }
+        
+      ]
     },
-    {
-      path: '/signup',
-      name: 'Signup',
-      component: Signup
-    },
-    {
-      path: '/home',
-      name: 'home',
-      component: Home
-    },
-    {
-      path: '/about',
-      name: 'about',
-      component: About
-    },
-    {
-      path: '/blog',
-      name: 'Blog',
-      component: Blog
-    },
-    {
-      path: '/contact',
-      name: 'Contact',
-      component: Contact
-    },
-    {
-      path: '/language',
-      name: 'Language',
-      component: Language
-    }
 
   ]
 })
-

@@ -21,6 +21,19 @@
         >
           {{ link.text }}
         </v-btn>
+          <v-btn
+            class="mr-2"
+            text
+            @click="logOut"
+          >
+            Log out
+            <v-icon
+              dark
+              right
+            >
+            mdi-account-off
+            </v-icon>
+          </v-btn>
         <v-spacer />
       </v-layout>
     </v-container>
@@ -45,6 +58,13 @@ export default {
 
       this.$vuetify.goTo(item.href);
     },
+    logOut() {
+      this.$store.dispatch("auth/logout").then(()=>{
+        if(!this.user_logged) {
+          this.$router.push('./login')
+        }
+      })
+    }
   },
 };
 </script>

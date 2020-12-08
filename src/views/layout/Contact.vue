@@ -432,5 +432,5 @@ export default {
 };
 </script>
 <style>
-@import "../assets/styles/Contact.css";
+@import "../../assets/styles/Contact.css";
 </style>

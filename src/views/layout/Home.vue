@@ -88,11 +88,26 @@
 <script>
 export default {
   name: "Home",
+  computed: {
+    user_logged: {
+      get() {
+        return this.$store.getters["auth/user_logged"]
+      }
+    }
+  },
+  created() {
+    if (!this.user_logged) {
+      this.$router.push("./login")
+    }
 
+  },
+  methods: {
+
+  },
   components: {},
 };
 </script>
 
 <style>
-@import "../assets/styles/Home.css";
+@import "../../assets/styles/Home.css";
 </style>

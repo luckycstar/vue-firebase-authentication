@@ -58,12 +58,12 @@ export default {
     return {
       items: [
         {
-          src: require("../assets/styles/images/SectorLevelMap_MultiKulti.jpg"),
+          src: require("../../assets/styles/images/SectorLevelMap_MultiKulti.jpg"),
           text: "The VILLAGE",
           subtext: "A key UNIT of our Platform is the VILLAGE.",
         },
         {
-          src: require("../assets/styles/images/brain-geometric-shapes-blue-colors-vector-7730781.jpg"),
+          src: require("../../assets/styles/images/brain-geometric-shapes-blue-colors-vector-7730781.jpg"),
           text: "1. Language ATOMS, making connections",
           subtext: "Meet the BUILDING",
         },
@@ -74,5 +74,5 @@ export default {
 </script>
 
 <style>
-@import "../assets/styles/Blog.css";
+@import "../../assets/styles/Blog.css";
 </style>
